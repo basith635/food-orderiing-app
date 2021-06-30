@@ -1,0 +1,23 @@
+.cart-container-in {
+    background: #57a3b9;
+    padding: 10px;
+    border-radius: 5px;
+}
+.cart-text {
+    font-size: 1.2rem;
+}
+.badge {
+    background: #561515;
+    padding: 10px;
+    border-radius: 50%;
+}
+.bounce { 
+   animation: bump 300ms ease-out;
+ }
+ 
+ @keyframes bounce { 
+    0%, 20%, 50%, 80%, 100% {transform: translateY(0);} 
+    40% {transform: translateY(-30px);} 
+    60% {transform: translateY(-15px);} 
+ }
+ 

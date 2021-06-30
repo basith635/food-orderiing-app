@@ -1,0 +1,27 @@
+ul {
+    padding: 0;
+    margin: 0;
+}
+ul li {
+    list-style-type: none;
+}
+.container {
+    display: flex;
+    align-items: stretch;
+}
+.imgBlock {
+    max-width : 150px;
+    width : 150px;
+    flex-grow: 3;
+}
+.description {
+    font-size: 20px;
+    padding: 10px;
+    flex-grow: 5;
+}
+.item-form {
+    flex-grow: 1;
+}
+.price {
+    font-style: italic;
+}

@@ -1,0 +1,9 @@
+.button {
+    color: red;
+    min-width: 150px;
+    border-radius: 10px;
+}
+
+.button:hover {
+    color: blue;
+}

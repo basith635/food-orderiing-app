@@ -1,0 +1,11 @@
+.cart-items {
+    border-bottom: 1px solid #000; 
+    display: flex;
+    align-items: stretch;
+}
+.summary {
+    flex-grow:3; 
+}
+.actions {
+    flex-grow:1; 
+}
