@@ -1,9 +1,15 @@
 .button {
-    color: red;
-    min-width: 150px;
+    cursor: pointer;
+    color: #fff;
+    min-width: 70px;
     border-radius: 10px;
+    padding: 10px;
+    box-shadow: none;
+    border: none;
+    background: #561515;
+    margin-right: 5px;
 }
 
 .button:hover {
-    color: blue;
+    background-color: #bd7a7a;
 }

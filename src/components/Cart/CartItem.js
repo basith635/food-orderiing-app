@@ -1,17 +1,20 @@
 import React from 'react';
 import styles from '../Cart/CartItem.module.css';
+import Button from '../UI/Button';
 const CartItem = props => {
     return (
-        <li className={styles['cart-items']}>
-            <div>
-                <h2> { props.name} </h2>
+        <li>
+            <div className={styles['cart-items']}>
+                <div className={styles.name}>
+                    <h3> {props.name} </h3>
+                </div>
                 <div className={styles.summary}>
-                    <span className={styles.price}> { props.price} </span>
-                    <span className={styles.amount}> X {props.amount}</span>
+                    <span className={styles.price}> {props.price} </span>
+                    X <span className={styles.amount}> {props.amount}</span>
                 </div>
                 <div className={styles.actions}>
-                    <button onClick={props.onAddItem}> Add </button>
-                    <button onClick={props.onRemoveItem}> Remove </button>
+                    <Button onClick={props.onAddItem} label='+' />
+                    <Button onClick={props.onRemoveItem} label='-' />
                 </div>
             </div>
         </li>

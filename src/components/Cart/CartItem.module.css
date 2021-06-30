@@ -2,10 +2,23 @@
     border-bottom: 1px solid #000; 
     display: flex;
     align-items: stretch;
+    padding: 12px 0;
 }
 .summary {
     flex-grow:3; 
 }
 .actions {
     flex-grow:1; 
+}
+.name {
+    flex-grow:3;   
+}
+.amount {
+    border: 1px solid #ccc;
+    box-shadow: #e4cece 1px 2px 3px;
+    padding: 2px 12px;
+    border-radius: 5px;
+}
+h3 {
+    margin:0 ;
 }
