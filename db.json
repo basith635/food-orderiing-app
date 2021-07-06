@@ -1,0 +1,56 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "meals": [
+    {
+      "id": 1,
+      "name": "Hydrabadi Biriyani",
+      "price": 150,
+      "description": "Biriyani is an Indian dish featuring long-grained like Basmathi flaouverd with spices",
+      "image": "1.jpg"
+    },
+    {
+      "id": 2,
+      "name": "DUM Biriyani",
+      "price": 300,
+      "description": "Biriyani is an Indian dish featuring long-grained like Basmathi flaouverd with spices",
+      "image": "2.jpg"
+    },
+    {
+      "id": 3,
+      "name": "fried Chicken Lolipop",
+      "price": 200,
+      "description": "Spicy Chicked with grilled onions, Spicy Chicked with grilled onions, Spicy Chicked Onions",
+      "image": "3.jpg"
+    },
+    {
+      "id": 4,
+      "name": "POT Biriyani",
+      "price": 400,
+      "description": "Biriyani is an Indian dish featuring long-grained like Basmathi flaouverd with spices",
+      "image": "4.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Mutton Savarma",
+      "price": 250,
+      "description": "Indian Goat meat with stuffed vegetables, Indian Goat meat with stuffed vegetables",
+      "image": "5.jpg"
+    }
+  ]
+}

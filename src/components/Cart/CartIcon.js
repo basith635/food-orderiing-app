@@ -23,7 +23,7 @@ const CartIcon = ( props ) =>
         <Fragment>
             <div className={ btnClass } onClick={ props.onClick }>
                 <span className={ styles[ 'cart-container-in' ] }>
-                    <img src="https://img.icons8.com/ios-glyphs/30/000000/fast-cart.png" />
+                    <img src="https://img.icons8.com/ios-glyphs/30/000000/fast-cart.png" alt="meal_img"/>
                     <span className={ styles[ 'cart-text' ] }>Your cart has </span>
                     <span className={ styles.badge }>
                         { totalNoOfcartItems }

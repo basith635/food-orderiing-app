@@ -10,14 +10,16 @@ ul li {
     align-items: stretch;
 }
 .imgBlock {
-    max-width : 150px;
-    width : 150px;
-    flex-grow: 3;
+    flex-grow: 5;
+}
+.meal-img {
+    max-width : 100px;
+    width : 100px;
 }
 .description {
     font-size: 20px;
     padding: 10px;
-    flex-grow: 5;
+    flex-grow: 3;
 }
 .item-form {
     flex-grow: 1;

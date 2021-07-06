@@ -1,61 +1,56 @@
-import React, { Fragment } from 'react';
+import React, { useState, useCallback, useEffect } from 'react';
 import MealItem from './MealItem';
 import Card from '../UI/Card';
+const Meals = () => {
+    const [availableMeals, setavailableMeals] = useState([]);
+    const [isLoading, setIsLoading] = useState(false);
+    const [error, setError] = useState(null);
+    const loadMeals = useCallback(async () => {
+        setIsLoading(true);
+        setError(null);
+        try {
+            const response = await fetch('http://localhost:3004/meals', {
+                method: 'GET'
+            });
+            if (!response.ok) {
+                throw new Error('Request failed');
+            }
+            const data = await response.json();
+            setavailableMeals(data);
+        } catch (error) {
+            setError(error.message || 'Something went wrong');
+        }
+        setIsLoading(false);
 
-const DUMMY_MEALS = [
-    {
-        id: 1,
-        name: 'Hydrabadi Biriyani',
-        price: 150,
-        description: 'Biriyani is an Indian dish featuring long-grained like Basmathi flaouverd with spices',
-        image: '1.jpg'
-    },
-    {
-        id: 2,
-        name: 'DUM Biriyani',
-        price: 300,
-        description: 'Biriyani is an Indian dish featuring long-grained like Basmathi flaouverd with spices',
-        image: '2.jpg'
-    },
-    {
-        id: 3,
-        name: 'Chieck Lolipop',
-        price: 200,
-        description: 'Spicy Chicked with grilled onions, Spicy Chicked with grilled onions, Spicy Chicked Onions',
-        image: '3.jpg'
-    },
-    {
-        id: 4,
-        name: 'POT Biriyani',
-        price: 400,
-        description: 'Biriyani is an Indian dish featuring long-grained like Basmathi flaouverd with spices',
-        image: '4.jpg'
-    },
-    {
-        id: 5,
-        name: 'Mutton Savarma',
-        price: 250,
-        description: 'Indian Goat meat with stuffed vegetables, Indian Goat meat with stuffed vegetables',
-        image: '5.jpg'
-    }
-];
-const Meals = () =>
-{
-    const mealsList = DUMMY_MEALS.map( meal => {
-        return (<MealItem
-            key = {meal.id}
-            id = {meal.id}
-            name = {meal.name}
-            price = {meal.price}
-            description = { meal.description}
-        />);
-        
+    }, []);
+    useEffect(() => {
+        loadMeals();
+    }, [loadMeals]);
+    const mealsList = availableMeals.map(meal => {
+        return (
+            <MealItem
+                key={meal.id}
+                id={meal.id}
+                name={meal.name}
+                price={meal.price}
+                description={meal.description}
+            />
+        );
+
     });
+    let content = <p> No Meals Found..</p>;
+    if (availableMeals.length > 0) {
+        content = <ul>{mealsList}</ul>;
+    }
+    if (isLoading) {
+        content = <p>Loading meals. Please wait...!</p>;
+    }
+    if (error) {
+        content = <p>{error}</p>;
+    }
     return (
         <Card>
-            <ul>
-                { mealsList }
-            </ul>
+            {content}
         </Card>
     );
 };

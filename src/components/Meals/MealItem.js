@@ -3,6 +3,7 @@ import Card from '../UI/Card';
 import styles from '../Meals/MealItem.module.css';
 import MealItemForm from '../Meals/MealItemForm';
 import CartContext from '../../store/cart-context';
+import img from '../../images/biriyani.jpg';
 
 const MealItem = ( props ) =>
 {
@@ -21,7 +22,7 @@ const MealItem = ( props ) =>
         <Card>
             <div className={ styles.container }>
                 <div className={ styles.imgBlock }>
-                    <img src={ require( "../../images/1.jpg" ) } alt={ props.name } width="100%" />
+                    <img src={ img } alt={ props.name } className={styles['meal-img']} width="100%" />
                     <h3>
                         { props.name }
                     </h3>
