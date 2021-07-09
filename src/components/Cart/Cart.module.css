@@ -4,3 +4,10 @@
 .actions {
     text-align: right;
 }
+.submitted {
+    text-align: center;
+    padding: 20px;
+}
+.submitted h3 {
+    color: green;
+}
